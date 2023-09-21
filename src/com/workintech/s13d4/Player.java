@@ -3,11 +3,9 @@ package com.workintech.s13d4;
 public class Player {
     private String name;
     private int healthPercentage;
-    private enum Weapon {
-        WEAPON;
-    }
+    private Weapon weapon;
 
-    public Player(String name, int healthPercentage){
+    public Player(String name, int healthPercentage, Weapon weapon){
         this.name = name;
         if(healthPercentage < 0){
             this.healthPercentage = 0;
@@ -16,6 +14,7 @@ public class Player {
         } else{
             this.healthPercentage = healthPercentage;
         }
+        this.weapon = weapon;
     }
 
     public int healthRemaining(){

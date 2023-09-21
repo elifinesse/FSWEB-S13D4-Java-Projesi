@@ -28,7 +28,11 @@ public class Point {
         return Math.sqrt((x * x) + (y * y));
     }
     public double distance(Point p){
-        return Math.sqrt((this.x - p.x) * (this.x - p.x) + (this.y - p.y) * (this.y - p.y));
+        if(p != null){
+            return Math.sqrt((this.x - p.x) * (this.x - p.x) + (this.y - p.y) * (this.y - p.y));
+        } else {
+            return distance();
+        }
     }
     public double distance(int a, int b){
         return Math.sqrt((this.x - a) * (this.x - a) + (this.y - b) * (this.y - b));

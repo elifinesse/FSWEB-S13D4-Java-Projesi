@@ -15,5 +15,11 @@ public class Main {
         Point point = new Point(0,0);
 
         System.out.println("distance()= " + point.distance());
+
+        Point p1 = new Point(4, 5);
+
+        Point p2 = null;
+        
+        System.out.println(p1.distance(p2));
     }
 }
