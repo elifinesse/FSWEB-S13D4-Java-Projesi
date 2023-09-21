@@ -24,6 +24,7 @@ public class Player {
         healthPercentage =- damage;
         if (healthPercentage < 0){
             System.out.println(name + " player has been knocked out of game");
+            healthPercentage = 0;
         }
     }
     public void restoreHealth(int healthPotion){
@@ -32,6 +33,10 @@ public class Player {
         } else {
             healthPercentage = 100;
         }
+    }
 
+    @Override
+    public String toString() {
+        return "Name: " + name + " Health: " + healthPercentage + "% Weapon: " + weapon;
     }
 }

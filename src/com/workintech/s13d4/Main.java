@@ -19,7 +19,13 @@ public class Main {
         Point p1 = new Point(4, 5);
 
         Point p2 = null;
-        
+
         System.out.println(p1.distance(p2));
+
+        Player player1 = new Player("elf", 20, Weapon.PINK);
+
+        System.out.println(player1);
+        player1.loseHealth(30);
+        System.out.println(player1.healthRemaining());
     }
 }
